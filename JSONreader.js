@@ -1,8 +1,9 @@
 const fs = require('fs');
+let Student;
 
 fs.readFile('output.json', (err, data) => {
     if (err) throw err;
-    let Student = JSON.parse(data);
+    Student = JSON.parse(data);
     console.log(Student);
 });
 
