@@ -15,6 +15,10 @@ html {background-color: grey;}
   width: 35px;
 }
 
+.Investment {
+  width: 60px;
+}
+
 .Header {
   font-size: 100px;
   color: Maroon;
