@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+.list {
+  max-width: 70px;
+}
+
 html {background-color: grey;}
 
 .Day {
