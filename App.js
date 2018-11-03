@@ -16,6 +16,10 @@ class App extends Component {
     Investment: 0
   }
 
+  
+
+
+
   dayHandler = (event) => {
     this.setState({
       Day: event.target.value
@@ -47,7 +51,8 @@ class App extends Component {
 
   render() {
 
-    
+
+
     let Day = "Day";
     let jsn = this.state.data.title;
     const reactStringReplace = require('react-string-replace')
@@ -57,7 +62,20 @@ class App extends Component {
       <a></a>
     ));
 
+
+
+
+    let str = this.state.data.title;
+    let searchOut = str.match(/Dec 12, 2013/g);
+    let searchAlt = str.search("Dec 12, 2013");
+    let searchAlt2 = str.search("Feb 02, 2017");
+    let searchOut2 = str.match(/Feb 02, 2017/g);
+
     
+
+
+
+
     let k = null;
     const d = 1;
     let x = this.state.Day-1;
@@ -74,8 +92,8 @@ class App extends Component {
       
       this.state.Month == 1 && 
       (
-        this.state.Year == 2014||
-        this.state.Year == q)) {
+      this.state.Year == 2014||
+      this.state.Year == q)) {
       k = replacedText[replacedText.length - 4481 - (x*18) - ((z*365*18)+(z + z)) ];
     }
     
@@ -229,7 +247,32 @@ class App extends Component {
         {/* <p>{this.dateHandler()}</p> */}
         {/* <p>{Object.keys(this.state.data)[0]}</p> */}
         {/* <p>{this.state.data.title}</p> */}
+        {/* <br></br>
+        <p>{sear}</p> */}
+        <p>{searchOut}</p>
+        <p>Position in array: {searchAlt}</p>
+        <p>
+        {str[searchAlt+13]}
+        {str[searchAlt+14]}
+        {str[searchAlt+15]}
+        {str[searchAlt+16]}
+        {str[searchAlt+17]}
+        {str[searchAlt+18]}
+        {str[searchAlt+19]}
+        </p>
+        <p>{searchOut2}</p>
+        <p>Position in array: {searchAlt2}</p>
+        <p>
+        {str[searchAlt2+13]}
+        {str[searchAlt2+14]}
+        {str[searchAlt2+15]}
+        {str[searchAlt2+16]}
+        {str[searchAlt2+17]}
+        {str[searchAlt2+18]}
+        {str[searchAlt2+19]}
+        </p>
       </div>
+      
     );
   }
 }
