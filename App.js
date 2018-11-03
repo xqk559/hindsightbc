@@ -6,6 +6,7 @@ import jsonData from './output.json';
 const reactStringReplace = require('react-string-replace')
 const fs = require('fs');
 
+
 class App extends Component {
   state = {
     data: jsonData,
@@ -58,13 +59,103 @@ class App extends Component {
 
     
     let k = null;
-    let d = 1;
+    const d = 1;
     let x = this.state.Day-1;
 
+    const y = 14;
+    let z = this.state.Year-14;
+    let q = y+z;
 
-    if ( this.state.Day == d+x && this.state.Month == 5 && (this.state.Year == 2013||this.state.Year == 13)) {
-      k = replacedText[replacedText.length - 65 - (x*18)];}
+
+
+    if ( 
+      
+      this.state.Day == d+x && 
+      
+      this.state.Month == 1 && 
+      (
+        this.state.Year == 2014||
+        this.state.Year == q)) {
+      k = replacedText[replacedText.length - 4481 - (x*18) - ((z*365*18)+(z + z)) ];
+    }
     
+    if ( 
+      this.state.Day == d+x && 
+      this.state.Month == 2 && (
+      this.state.Year == 2014||
+      this.state.Year == q)) {
+      k = replacedText[replacedText.length - 4481 - (x*18) - (31*18) - ((z*365*18)+(z + z + z + z)) ];}
+
+    if ( 
+      this.state.Day == d+x && 
+      this.state.Month == 3 && (
+      this.state.Year == 2014||
+      this.state.Year == q)) {
+      k = replacedText[replacedText.length - 4481 - (x*18) - (59*18) - ((z*365*18)+(z + z + z + z)) ];}
+
+    if ( 
+      this.state.Day == d+x && 
+      this.state.Month == 4 && (
+      this.state.Year == 2014||
+      this.state.Year == q)) {
+      k = replacedText[replacedText.length - 4481 - (x*18) - (90*18) - ((z*365*18)+(z + z + z + z)) ];}
+
+    if ( 
+      this.state.Day == d+x && 
+      this.state.Month == 5 && (
+      this.state.Year == 2014||
+      this.state.Year == q)) {
+      k = replacedText[replacedText.length - 4481 - (x*18) - (120*18) - ((z*365*18)+(z + z + z + z)) ];}
+
+    if ( 
+      this.state.Day == d+x && 
+      this.state.Month == 6 && (
+      this.state.Year == 2014||
+      this.state.Year == q)) {
+      k = replacedText[replacedText.length - 4481 - (x*18) - (151*18) - ((z*365*18)+(z + z + z + z)) ];}
+
+    if ( 
+      this.state.Day == d+x && 
+      this.state.Month == 7 && (
+      this.state.Year == 2014||
+      this.state.Year == q)) {
+      k = replacedText[replacedText.length - 4481 - (x*18) - (181*18) - ((z*365*18)+(z + z + z + z)) ];}
+    
+    if ( 
+      this.state.Day == d+x && 
+      this.state.Month == 8 && (
+      this.state.Year == 2014||
+      this.state.Year == q)) {
+      k = replacedText[replacedText.length - 4481 - (x*18) - (212*18) - ((z*365*18)+(z + z + z + z)) ];}
+
+    if ( 
+      this.state.Day == d+x && 
+      this.state.Month == 9 && (
+      this.state.Year == 2014||
+      this.state.Year == q)) {
+      k = replacedText[replacedText.length - 4481 - (x*18) - (243*18) - ((z*365*18)+(z + z + z + z)) ];}
+
+    if ( 
+      this.state.Day == d+x && 
+      this.state.Month == 10 && (
+      this.state.Year == 2014||
+      this.state.Year == q)) {
+      k = replacedText[replacedText.length - 4481 - (x*18) - (273*18) -  ((z*365*18)+(z + z + z + z)) ];}
+
+    if ( 
+      this.state.Day == d+x && 
+      this.state.Month == 11 && (
+      this.state.Year == 2014||
+      this.state.Year == q)) {
+      k = replacedText[replacedText.length - 4481 - (x*18) - (304*18) -  ((z*365*18)+(z + z + z + z)) ];}
+
+    if ( 
+      this.state.Day == d+x && 
+      this.state.Month == 12 && (
+      this.state.Year == 2014||
+      this.state.Year == q)) {
+      k = replacedText[replacedText.length - 4481 - (x*18) - (334*18) -  ((z*365*18)+(z + z + z + z)) ];}
+
 
 
     let coins = this.state.Investment/k;
@@ -86,6 +177,7 @@ class App extends Component {
 
     let n = 24;
 
+    let per = (100*(replacedText[24]/k)).toFixed(2);
 
     return (
       <div className="App">
@@ -125,10 +217,11 @@ class App extends Component {
         <br></br>
         <np>{replacedText[n+18]}</np>
         <br></br> */}
-        <p>{k}</p>
-        <br></br>
+        <p>Today, Bitcoin is worth ${replacedText[24]}.</p>
+        <p>On {this.state.Month}/{this.state.Day}/{this.state.Year}, Bitcoin was worth ${k}.</p>
         <p>If you invested ${this.state.Investment} on {this.state.Month}/{this.state.Day}/{this.state.Year},</p> 
-        <p>You would have {rounder} coins, valued today at: ${tvRound}</p>
+        <p>You would have {rounder} coins, valued today at: ${tvRound}.</p>
+        <p>This would be a {per}% difference.</p>
         <br></br>
         {/* <p>{replaceString.slice(-11)[0]}</p>
         <br></br>
