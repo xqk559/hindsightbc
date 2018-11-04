@@ -13,7 +13,8 @@ class App extends Component {
     Day: null,
     Month: null,
     Year: null,
-    Investment: 0
+    Investment: 0,
+    Date1: null
   }
 
   
@@ -40,7 +41,13 @@ class App extends Component {
       Investment: event.target.value
     })
   }
-  
+  dateHandler = (event) => {
+    this.setState({
+      Date1: event.target.value
+    })
+  }
+
+
   textReplacer = () => {
     let replacedText;
     let jsn = this.state.data.title;
@@ -66,113 +73,113 @@ class App extends Component {
 
 
     let str = this.state.data.title;
-    let searchOut = str.match(/Dec 12, 2013/g);
-    let searchAlt = str.search("Dec 12, 2013");
-    let searchAlt2 = str.search("Feb 02, 2017");
-    let searchOut2 = str.match(/Feb 02, 2017/g);
+    let searchOut = str.match(/this.state.Date1/g);
+    let searchAlt = str.search(this.state.Date1);
+    let searchAlt2 = str.search("Mar 13, 2017");
+    let searchOut2 = str.match(/Mar 13, 2017/g);
 
-    
-
-
-
-
-    let k = null;
-    const d = 1;
-    let x = this.state.Day-1;
-
-    const y = 14;
-    let z = this.state.Year-14;
-    let q = y+z;
+    let k = str.slice(searchAlt+13,searchAlt+19);
 
 
 
-    if ( 
+
+ 
+    // const d = 1;
+    // let x = this.state.Day-1;
+
+    // const y = 14;
+    // let z = this.state.Year-14;
+    // let q = y+z;
+
+
+
+    // if ( 
       
-      this.state.Day == d+x && 
+    //   this.state.Day == d+x && 
       
-      this.state.Month == 1 && 
-      (
-      this.state.Year == 2014||
-      this.state.Year == q)) {
-      k = replacedText[replacedText.length - 4481 - (x*18) - ((z*365*18)+(z + z)) ];
-    }
+    //   this.state.Month == 1 && 
+    //   (
+    //   this.state.Year == 2014||
+    //   this.state.Year == q)) {
+    //   k = replacedText[replacedText.length - 4481 - (x*18) - ((z*365*18)+(z + z)) ];
+    // }
     
-    if ( 
-      this.state.Day == d+x && 
-      this.state.Month == 2 && (
-      this.state.Year == 2014||
-      this.state.Year == q)) {
-      k = replacedText[replacedText.length - 4481 - (x*18) - (31*18) - ((z*365*18)+(z + z + z + z)) ];}
+    // if ( 
+    //   this.state.Day == d+x && 
+    //   this.state.Month == 2 && (
+    //   this.state.Year == 2014||
+    //   this.state.Year == q)) {
+    //   k = replacedText[replacedText.length - 4481 - (x*18) - (31*18) - ((z*365*18)+(z + z + z + z)) ];}
 
-    if ( 
-      this.state.Day == d+x && 
-      this.state.Month == 3 && (
-      this.state.Year == 2014||
-      this.state.Year == q)) {
-      k = replacedText[replacedText.length - 4481 - (x*18) - (59*18) - ((z*365*18)+(z + z + z + z)) ];}
+    // if ( 
+    //   this.state.Day == d+x && 
+    //   this.state.Month == 3 && (
+    //   this.state.Year == 2014||
+    //   this.state.Year == q)) {
+    //   k = replacedText[replacedText.length - 4481 - (x*18) - (59*18) - ((z*365*18)+(z + z + z + z)) ];}
 
-    if ( 
-      this.state.Day == d+x && 
-      this.state.Month == 4 && (
-      this.state.Year == 2014||
-      this.state.Year == q)) {
-      k = replacedText[replacedText.length - 4481 - (x*18) - (90*18) - ((z*365*18)+(z + z + z + z)) ];}
+    // if ( 
+    //   this.state.Day == d+x && 
+    //   this.state.Month == 4 && (
+    //   this.state.Year == 2014||
+    //   this.state.Year == q)) {
+    //   k = replacedText[replacedText.length - 4481 - (x*18) - (90*18) - ((z*365*18)+(z + z + z + z)) ];}
 
-    if ( 
-      this.state.Day == d+x && 
-      this.state.Month == 5 && (
-      this.state.Year == 2014||
-      this.state.Year == q)) {
-      k = replacedText[replacedText.length - 4481 - (x*18) - (120*18) - ((z*365*18)+(z + z + z + z)) ];}
+    // if ( 
+    //   this.state.Day == d+x && 
+    //   this.state.Month == 5 && (
+    //   this.state.Year == 2014||
+    //   this.state.Year == q)) {
+    //   k = replacedText[replacedText.length - 4481 - (x*18) - (120*18) - ((z*365*18)+(z + z + z + z)) ];}
 
-    if ( 
-      this.state.Day == d+x && 
-      this.state.Month == 6 && (
-      this.state.Year == 2014||
-      this.state.Year == q)) {
-      k = replacedText[replacedText.length - 4481 - (x*18) - (151*18) - ((z*365*18)+(z + z + z + z)) ];}
+    // if ( 
+    //   this.state.Day == d+x && 
+    //   this.state.Month == 6 && (
+    //   this.state.Year == 2014||
+    //   this.state.Year == q)) {
+    //   k = replacedText[replacedText.length - 4481 - (x*18) - (151*18) - ((z*365*18)+(z + z + z + z)) ];}
 
-    if ( 
-      this.state.Day == d+x && 
-      this.state.Month == 7 && (
-      this.state.Year == 2014||
-      this.state.Year == q)) {
-      k = replacedText[replacedText.length - 4481 - (x*18) - (181*18) - ((z*365*18)+(z + z + z + z)) ];}
+    // if ( 
+    //   this.state.Day == d+x && 
+    //   this.state.Month == 7 && (
+    //   this.state.Year == 2014||
+    //   this.state.Year == q)) {
+    //   k = replacedText[replacedText.length - 4481 - (x*18) - (181*18) - ((z*365*18)+(z + z + z + z)) ];}
     
-    if ( 
-      this.state.Day == d+x && 
-      this.state.Month == 8 && (
-      this.state.Year == 2014||
-      this.state.Year == q)) {
-      k = replacedText[replacedText.length - 4481 - (x*18) - (212*18) - ((z*365*18)+(z + z + z + z)) ];}
+    // if ( 
+    //   this.state.Day == d+x && 
+    //   this.state.Month == 8 && (
+    //   this.state.Year == 2014||
+    //   this.state.Year == q)) {
+    //   k = replacedText[replacedText.length - 4481 - (x*18) - (212*18) - ((z*365*18)+(z + z + z + z)) ];}
 
-    if ( 
-      this.state.Day == d+x && 
-      this.state.Month == 9 && (
-      this.state.Year == 2014||
-      this.state.Year == q)) {
-      k = replacedText[replacedText.length - 4481 - (x*18) - (243*18) - ((z*365*18)+(z + z + z + z)) ];}
+    // if ( 
+    //   this.state.Day == d+x && 
+    //   this.state.Month == 9 && (
+    //   this.state.Year == 2014||
+    //   this.state.Year == q)) {
+    //   k = replacedText[replacedText.length - 4481 - (x*18) - (243*18) - ((z*365*18)+(z + z + z + z)) ];}
 
-    if ( 
-      this.state.Day == d+x && 
-      this.state.Month == 10 && (
-      this.state.Year == 2014||
-      this.state.Year == q)) {
-      k = replacedText[replacedText.length - 4481 - (x*18) - (273*18) -  ((z*365*18)+(z + z + z + z)) ];}
+    // if ( 
+    //   this.state.Day == d+x && 
+    //   this.state.Month == 10 && (
+    //   this.state.Year == 2014||
+    //   this.state.Year == q)) {
+    //   k = replacedText[replacedText.length - 4481 - (x*18) - (273*18) -  ((z*365*18)+(z + z + z + z)) ];}
 
-    if ( 
-      this.state.Day == d+x && 
-      this.state.Month == 11 && (
-      this.state.Year == 2014||
-      this.state.Year == q)) {
-      k = replacedText[replacedText.length - 4481 - (x*18) - (304*18) -  ((z*365*18)+(z + z + z + z)) ];}
+    // if ( 
+    //   this.state.Day == d+x && 
+    //   this.state.Month == 11 && (
+    //   this.state.Year == 2014||
+    //   this.state.Year == q)) {
+    //   k = replacedText[replacedText.length - 4481 - (x*18) - (304*18) -  ((z*365*18)+(z + z + z + z)) ];}
 
-    if ( 
-      this.state.Day == d+x && 
-      this.state.Month == 12 && (
-      this.state.Year == 2014||
-      this.state.Year == q)) {
-      k = replacedText[replacedText.length - 4481 - (x*18) - (334*18) -  ((z*365*18)+(z + z + z + z)) ];}
+    // if ( 
+    //   this.state.Day == d+x && 
+    //   this.state.Month == 12 && (
+    //   this.state.Year == 2014||
+    //   this.state.Year == q)) {
+    //   k = replacedText[replacedText.length - 4481 - (x*18) - (334*18) -  ((z*365*18)+(z + z + z + z)) ];}
 
 
 
@@ -206,7 +213,7 @@ class App extends Component {
         <br></br>
         <br></br>
         <br></br>
-        <np id="demo">{Day}: </np>
+        {/* <np id="demo">{Day}: </np>
         <input type="text" className="Day" onChange={this.dayHandler} key="day" />
         <np>{' '}</np>
         <np>Month: </np>
@@ -214,10 +221,13 @@ class App extends Component {
         <np>{' '}</np>
         <np>Year: </np>
         <input type="text" className="Year" onChange={this.yearHandler} key="year" />
-        <np>{' '}</np>
+        <np>{' '}</np> */}
+        <np>Date (ex: Apr 20, 2014): </np>
+        <input type="text" className="date" onChange={this.dateHandler} key="date" />
+        {/* <pn>{this.state.Date1}</pn> */}
+        <pn>  </pn>
         <np>Investment: </np>
         <input type="text" className="Investment" onChange={this.investHandler} key="invest" />
-        <br></br>
         {/* <np>{this.state.Day}</np> */}
         {/* <br></br>
         <np>{this.state.Month}</np>
@@ -236,8 +246,8 @@ class App extends Component {
         <np>{replacedText[n+18]}</np>
         <br></br> */}
         <p>Today, Bitcoin is worth ${replacedText[24]}.</p>
-        <p>On {this.state.Month}/{this.state.Day}/{this.state.Year}, Bitcoin was worth ${k}.</p>
-        <p>If you invested ${this.state.Investment} on {this.state.Month}/{this.state.Day}/{this.state.Year},</p> 
+        <p>On {this.state.Date1}, Bitcoin was worth ${k}.</p>
+        <p>If you invested ${this.state.Investment} on {this.state.Date1},</p> 
         <p>You would have {rounder} coins, valued today at: ${tvRound}.</p>
         <p>This would be a {per}% difference.</p>
         <br></br>
@@ -249,28 +259,12 @@ class App extends Component {
         {/* <p>{this.state.data.title}</p> */}
         {/* <br></br>
         <p>{sear}</p> */}
-        <p>{searchOut}</p>
+        {/* <p>{searchOut}</p>
         <p>Position in array: {searchAlt}</p>
-        <p>
-        {str[searchAlt+13]}
-        {str[searchAlt+14]}
-        {str[searchAlt+15]}
-        {str[searchAlt+16]}
-        {str[searchAlt+17]}
-        {str[searchAlt+18]}
-        {str[searchAlt+19]}
-        </p>
+        <p>{str.slice(searchAlt+13,searchAlt+19)}</p>
         <p>{searchOut2}</p>
         <p>Position in array: {searchAlt2}</p>
-        <p>
-        {str[searchAlt2+13]}
-        {str[searchAlt2+14]}
-        {str[searchAlt2+15]}
-        {str[searchAlt2+16]}
-        {str[searchAlt2+17]}
-        {str[searchAlt2+18]}
-        {str[searchAlt2+19]}
-        </p>
+        <p>{str.slice(searchAlt2+13,searchAlt2+19)}</p> */}
       </div>
       
     );
