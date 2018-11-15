@@ -6,6 +6,7 @@
     "big-integer": "^1.6.36",
     "cheerio": "latest",
     "express": "latest",
+    "joi": "^14.0.4",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-scripts": "2.0.5",

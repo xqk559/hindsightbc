@@ -5,8 +5,8 @@ var cheerio = require('cheerio');
 var app     = express();
 
 app.get('/scrape', function(req, res){
-  // Let's scrape Anchorman 2
-  url = 'https://coinmarketcap.com/currencies/bitcoin/historical-data/?start=20130428&end=20181026';
+
+  url = 'https://coinmarketcap.com/currencies/bitcoin/historical-data/?start=20130428&end=20181104';
 
   request(url, function(error, response, html){
     if(!error){
@@ -18,12 +18,8 @@ app.get('/scrape', function(req, res){
       $('.table-responsive').filter(function(){
         var data = $(this);
         title = data.text().trim();
-
         json.title = title;
-
       })
-
-
     }
 
     fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
@@ -37,3 +33,5 @@ app.get('/scrape', function(req, res){
 app.listen('8081')
 console.log('Magic happens on port 8081 localhost:8081/scrape');
 exports = module.exports = app;
+
+
