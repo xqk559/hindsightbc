@@ -14,8 +14,9 @@
 }
 
 
-html {background-color: grey;}
-
+html {
+  background-image: url("congruent_outline.png");
+}
 .Day {
   width: 20px;
 }
